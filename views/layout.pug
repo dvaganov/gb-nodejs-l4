@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        link(rel='stylesheet', href='main.css')
+        title!= title
+
+    body
+        div.left
+            h1!= title
+
+            nav
+                ul
+                each item in menu
+                    li: a(href!= item.link)!= item.name
+
+        div.right
+            block content

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    form(method='post' action='/news')
+        label Выбери газету
+        select(name='newspaper')
+            each newspaper in newspapers
+                option(value!= newspaper)!= newspaper
+
+        label А теперь укажи желаемые категории
+        select(name='categories[]' multiple)
+            each category in categories
+                option(value!= category)!= category
+
+        input(type='submit' value='Подобрать')

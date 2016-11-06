@@ -1,0 +1,32 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #ac5;
+}
+
+.left {
+    box-sizing: border-box;
+    width: 20%;
+    padding: 20px;
+    float: left;
+}
+
+.right {
+    box-sizing: border-box;
+    width: 80%;
+    background-color: #eee;
+    padding: 50px;
+    min-height: 100vh;
+    float: left;
+    border-left: solid black 5px;
+}
+
+.right::after {
+    content: '';
+    clear: both;
+}
+
+.right form > * {
+    display: block;
+    margin: 10px 0;
+}

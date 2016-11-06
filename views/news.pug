@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+    each category, categoryName in articles
+        h2!= categoryName
+
+        if (category)
+            ul
+                each article in category
+                    li: a(href!= article.link target='_blank')!= article.title
+        else
+            p Нет новостей в выбранной категории
+
+    else
+        p Нет установок, нечего показывать
